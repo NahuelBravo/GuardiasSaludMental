@@ -16,7 +16,3 @@ Consideraciones:
 Idea Original - Tomás Manoukian
 LINK: https://github.com/tromenArarat/ITChangas/tree/main/GuardiasSaludMental
 
-
-Clases: Guardia, Profesional, Dia o Fecha
-
-Profesional: credito, licencia, guardias finde semana
