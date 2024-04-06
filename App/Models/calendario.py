@@ -1,25 +1,30 @@
 import calendar
 import datetime
-from .fecha import Fecha
+from App.Models.fecha import Fecha
 
 
-class Calendario(Fecha):
+class Calendario:
     def __init__(self):
+        self.calendario_mes = None
+        self.fechas = []
         self.set_calendario(int(input("Ingrese el año: ")),
                             int(input("Ingrese el mes (numero): ")))
-        self.calendario_mes = None
 
     def set_calendario(self, anio, mes):
         self.calendario_mes = calendar.month(anio, mes)
         ultimo_dia_mes = calendar.monthrange(anio, mes)[1]
         fechas_mes = [datetime.date(anio, mes, dia)
                       for dia in range(1, ultimo_dia_mes + 1)]
-        fechas_mes = [fecha.strftime("%d-%m-%Y") for fecha in fechas_mes]
-        super().__init__(fechas_mes)
+        for fecha in fechas_mes:
+            fecha_dia = Fecha(fecha.strftime("%d-%m-%Y"))
+            self.fechas.append(fecha_dia)
 
     def __str__(self):
+        fechas = []
+        for fecha in self.fechas:
+            fechas.append(fecha.__str__())
         return (f"Calendario: {self.calendario_mes}\n"
-                f"Fechas: {self.fechas_mes}")
+                f"Fechas: {fechas}")
 
 
 abril = Calendario()
