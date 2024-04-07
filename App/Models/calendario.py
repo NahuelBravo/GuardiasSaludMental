@@ -4,11 +4,11 @@ from App.Models.fecha import Fecha
 
 
 class Calendario:
-    def __init__(self):
+    def __init__(self, anio, mes):
         self.calendario_mes = None
         self.fechas = []
-        self.set_calendario(int(input("Ingrese el año: ")),
-                            int(input("Ingrese el mes (numero): ")))
+        self.set_calendario(int(anio),
+                            int(mes))
 
     def set_calendario(self, anio, mes):
         self.calendario_mes = calendar.month(anio, mes)
@@ -26,6 +26,3 @@ class Calendario:
         return (f"Calendario: {self.calendario_mes}\n"
                 f"Fechas: {fechas}")
 
-
-abril = Calendario()
-print(abril)

@@ -16,3 +16,9 @@ Consideraciones:
 Idea Original - Tomás Manoukian
 LINK: https://github.com/tromenArarat/ITChangas/tree/main/GuardiasSaludMental
 
+Avances:
+- 07/04/2024: 
+  * Primeras pruebas de ordenamiento, sin tener en cuenta los fines de semana, feriados, 
+    y dias de separacion entre guardia y guardia.
+  * Se creo una nueva clase que ordena en un diccionario los profesionales por dia de disponibilidad
+    (No se utiliza por el momento)
