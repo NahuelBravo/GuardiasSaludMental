@@ -1,4 +1,4 @@
-from disponibilidad import *
+from App.Models.disponibilidad import Disponibilidad
 
 
 class Profesional(Disponibilidad):
@@ -14,3 +14,4 @@ class Profesional(Disponibilidad):
                 f"Cantidad de guardias: {self.cant_guardias}\n"
                 f"Guardias de fin de semana: {self.guardias_finde}\n"
                 f"Disponibilidad: {super().__str__()}")
+
